@@ -1,5 +1,6 @@
 package edu.javablinov.tasks.chapter1.option_a;
 
+import edu.javablinov.tasks.Util.ArrayUtil;
 import edu.javablinov.tasks.Util.ConsoleUtil;
 
 import java.sql.Array;
@@ -14,21 +15,9 @@ public class Task3 {
         for (int i = 0; i < arrayRandomNumbers.length; i++) {
             arrayRandomNumbers[i] = (int) (Math.random() * 1000000);
         }
-        printArray(arrayRandomNumbers);
-        printlnArray(arrayRandomNumbers);
+        ArrayUtil.printArray(arrayRandomNumbers);
+        ArrayUtil.printlnArray(arrayRandomNumbers);
     }
 
-    static void printlnArray(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
-        }
-    }
-
-    static void printArray(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-        }
-        System.out.println();
-    }
 
 }
