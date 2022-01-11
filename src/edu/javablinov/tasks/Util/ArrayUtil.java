@@ -29,7 +29,7 @@ public class ArrayUtil {
         int temp = array[0];
         while (!isSorted) {
             isSorted = true;
-            for (int i = 0; i < array.length; i++) {
+            for (int i = 0; i < array.length - 1 ; i++) {
                 if (array[i] > array[i + 1]) {
                     isSorted = false;
                     temp = array[i + 1];
