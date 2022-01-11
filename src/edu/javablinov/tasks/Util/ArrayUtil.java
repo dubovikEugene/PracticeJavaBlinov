@@ -23,4 +23,38 @@ public class ArrayUtil {
         }
         return array;
     }
+
+    public static int[] bubbleSortAscending(int[] array) {
+        boolean isSorted = false;
+        int temp = array[0];
+        while (!isSorted) {
+            isSorted = true;
+            for (int i = 0; i < array.length; i++) {
+                if (array[i] > array[i + 1]) {
+                    isSorted = false;
+                    temp = array[i + 1];
+                    array[i + 1] = array[i];
+                    array[i] = temp;
+                }
+            }
+        }
+        return array;
+    }
+
+    public static int[] bubbleSortDescending(int[] array) {
+        boolean isSorted = false;
+        int temp;
+        while (!isSorted) {
+            isSorted = true;
+            for (int i = array.length - 1; i > 0; i--) {
+                if (array[i] > array[i - 1]) {
+                    isSorted = false;
+                    temp = array[i - 1];
+                    array[i - 1] = array[i];
+                    array[i] = temp;
+                }
+            }
+        }
+        return array;
+    }
 }
